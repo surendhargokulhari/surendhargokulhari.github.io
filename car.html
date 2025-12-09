@@ -208,11 +208,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-      const response = await fetch("https://car-rental-backend-2-3h7k.onrender.com", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, carModel })
-      });
+      const response = await fetch("https://car-rental-backend-2-3h7k.onrender.com/api/book", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ name, email, phone, carModel })
+});
+
 
       const data = await response.json();
 
